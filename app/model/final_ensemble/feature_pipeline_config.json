@@ -1,0 +1,15 @@
+{
+  "use_base": true,
+  "use_technical": true,
+  "use_alpha": true,
+  "use_cross_section": true,
+  "use_market": true,
+  "windows": [
+    3,
+    5,
+    10,
+    20,
+    30,
+    60
+  ]
+}

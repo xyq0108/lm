@@ -1,0 +1,67 @@
+# ============================================================
+# 2026 大数据挑战赛 — 默认配置文件
+# ============================================================
+general:
+  seed: 2026
+  device: auto
+  num_workers: 4
+  log_level: INFO
+
+paths:
+  data_dir: ./data
+  train_file: ./data/train.csv
+  model_dir: ./model
+  output_dir: ./output
+  temp_dir: ./temp
+  report_dir: ./reports
+
+task:
+  horizon_buy: 1    # T+1 开盘买入
+  horizon_sell: 5   # T+5 开盘卖出
+  max_stock_num: 5
+  max_weight_sum: 1.0
+
+features:
+  use_base: true
+  use_technical: true
+  use_alpha: true
+  use_cross_section: true
+  use_market: true
+  windows: [3, 5, 10, 20, 30, 60]
+
+validation:
+  method: walk_forward
+  folds:
+    - train_end: "2024-12-31"
+      valid_start: "2025-01-01"
+      valid_end: "2025-03-31"
+    - train_end: "2025-03-31"
+      valid_start: "2025-04-01"
+      valid_end: "2025-06-30"
+    - train_end: "2025-06-30"
+      valid_start: "2025-07-01"
+      valid_end: "2025-09-30"
+
+portfolio:
+  top_k: 5
+  weight_method: equal  # equal | score_weighted | conservative
+  max_single_weight: 0.3
+  min_score_threshold: null
+
+models:
+  - type: lgbm_ranker
+    active: true
+    config_path: ./stock_pred/src/config/lgb_ranker.yaml
+  - type: lgbm_regressor
+    active: true
+    config_path: ./stock_pred/src/config/lgb_regressor.yaml
+  - type: rule_model
+    active: true
+    config_path: ./stock_pred/src/config/rule_model.yaml
+
+ensemble:
+  method: rank_average
+  weights:
+    lgbm_ranker: 0.45
+    lgbm_regressor: 0.25
+    rule_model: 0.15

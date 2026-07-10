@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual env
+.venv/
+venv/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model outputs / temp
+app/stock_pred/model/
+app/stock_pred/temp/
+
+# Logs
+*.log
+
+# Git
+.git/
+
+# OS
+Thumbs.db
+.DS_Store

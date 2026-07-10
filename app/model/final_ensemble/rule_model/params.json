@@ -1,0 +1,16 @@
+{
+  "use_rules": [
+    "ret_5d",
+    "ret_20d",
+    "volume_ma_5",
+    "price_impact",
+    "std_20"
+  ],
+  "factor_weights": {
+    "ret_5d": 0.3,
+    "ret_20d": 0.2,
+    "volume_ma_5": 0.2,
+    "price_impact": 0.15,
+    "std_20": -0.15
+  }
+}

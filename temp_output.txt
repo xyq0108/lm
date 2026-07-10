@@ -1,0 +1,93 @@
+             
+
+       300 
+ 5  1
+ 300 
+
+ 
+
+      1) 
+           
+
+      2) https://github.com/Sherlock1956/THU-BDC2026
+            baostock  data 
+           get_stock_data_illustration.txt
+
+ 
+
+       result.csvUTF-8 
+
+
+                       stock_id,weight
+                       000408,0.2
+                       000975,0.2
+                       002028,0.2
+                       600372,0.2
+                       600036,0.2
+      1) stock_id,weight
+      2)  5 
+            1 1 
+      3) `,'
+ 
+
+1. 
+
+   T+1  T+5 
+
+
+
+ 0
+
+  
+
+1) 
+
+ nn  5
+
+ wi i 
+
+ Poi,Tp+en1 i  T+1 
+
+ Poi,Tp+en5 i  T+5 
+
+  wcashwcash = 1 -           n                   wi  
+                             i=1
+
+2) 
+
+   i  Ri 
+
+     Ri  =              Poi,Tp+en5 - Poi,Tp+en1
+                             Pio,Tpe+n1
+
+3) 
+
+  
+
+  = 0
+
+                          ×  ,+5 - ,+1
+                                  ,+1
+      =
+
+                    =1
+
+2. 
+
+  1) 
+       https://github.com/Sherlock1956/THU-BDC2026
+      2) 
+
+ 
+
+      1. 
+
+
+      2. 
+         a) 
+         b)  2026  4  1  arxiv
+              PytorchTensorflowGithub 
+
+      3. 
+      4. 
+

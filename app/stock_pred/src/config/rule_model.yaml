@@ -1,0 +1,15 @@
+# 规则模型配置文件
+model:
+  type: rule_model
+  use_rules:
+    - ret_5d
+    - ret_20d
+    - volume_ma_5
+    - price_impact
+    - std_20
+  factor_weights:
+    ret_5d: 0.30
+    ret_20d: 0.20
+    volume_ma_5: 0.20
+    price_impact: 0.15
+    std_20: -0.15

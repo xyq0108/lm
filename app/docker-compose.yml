@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  train:
+    build: .
+    image: stock-pred-challenge:latest
+    container_name: stock-pred-train
+    command: bash train.sh
+    volumes:
+      - ./data:/app/data
+      - ./model:/app/model
+      - ./output:/app/output
+      - ./temp:/app/temp
+      - ./reports:/app/reports
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: "no"
+
+  predict:
+    build: .
+    image: stock-pred-challenge:latest
+    container_name: stock-pred-predict
+    command: bash test.sh
+    volumes:
+      - ./data:/app/data
+      - ./model:/app/model
+      - ./output:/app/output
+      - ./temp:/app/temp
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: "no"

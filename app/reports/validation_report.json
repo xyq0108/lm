@@ -1,0 +1,8 @@
+{
+  "walk_forward_mean_return": 0.012056789967769523,
+  "walk_forward_std_return": 0.02734590762065925,
+  "walk_forward_positive_ratio": 0.6885245901639344,
+  "walk_forward_best_return": 0.10402070208918035,
+  "walk_forward_worst_return": -0.04406152107674546,
+  "walk_forward_n_days": 183
+}

@@ -1,0 +1,13 @@
+{
+  "selected_models": [
+    "rule_model",
+    "lgbm_regressor",
+    "lgbm_ranker"
+  ],
+  "ensemble_weights": {
+    "lgbm_ranker": 0.5,
+    "lgbm_regressor": 0.3,
+    "rule_model": 0.2
+  },
+  "ensemble_method": "rank_average"
+}

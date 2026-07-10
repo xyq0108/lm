@@ -1,0 +1,19 @@
+# LightGBM Ranker 配置文件
+model:
+  type: lgbm_ranker
+  objective: lambdarank
+  metric: ndcg
+  ndcg_eval_at: [5, 10]
+  label_gain: [0, 1, 2, 3, 4]
+  learning_rate: 0.03
+  num_leaves: 63
+  max_depth: -1
+  feature_fraction: 0.8
+  bagging_fraction: 0.8
+  bagging_freq: 1
+  min_data_in_leaf: 50
+  lambda_l1: 0.1
+  lambda_l2: 1.0
+  num_boost_round: 3000
+  early_stopping_rounds: 100
+  verbose: 100
